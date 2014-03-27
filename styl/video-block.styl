@@ -1,0 +1,84 @@
+#video_block
+  overflow: hidden
+  position: relative
+  padding: 283px 0 251px
+  width: 100%
+  height: 704px
+
+#video_block .container
+  position: relative
+  z-index: 2
+
+#video_block .overlay
+  position: absolute
+  z-index: 1
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: rgba(51,51,51,0.85)
+
+#video_block .title
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+#video_block .title:hover
+  color: orange
+
+#video_block .play_pause_wrapper
+  transform: translateY(125%) scale(0.4)
+  -o-transform: translateY(125%) scale(0.4)
+  -ms-transform: translateY(125%) scale(0.4)
+  -webkit-transform: translateY(125%) scale(0.4)
+
+#video_block .title span
+  position: relative
+  top: -11px
+  display: inline-block
+  vertical-align: middle
+  width: 163px
+  height: 163px
+  margin: 0 8px 0 14px
+  font-family: FontAwesome
+  cursor: pointer
+  border-radius: 50%
+  border: 15px solid #fff
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+#video_block .title span:hover
+  border-color: orange
+
+#video_block .title span:before
+  content: "\f04b"
+  position: absolute
+  left: 8px
+  top: 0
+  width: 132px
+  height: 132px
+  text-align: center
+  line-height: 133px
+  font-size: 74px
+  color: #fff
+  transition: color 0.3s ease-in-out
+  -webkit-transition: color 0.3s ease-in-out
+
+#video_block .title span:hover:before
+  color: orange
+
+#video_block .title span.play_pause:before
+  content: "\f04c"
+  left: 0
+
+/* Video BAckground */
+#video_block #controlBar_P2
+  position: static !Important
+
+#controlBar_P1
+  position: static !important
+
+#video_block iframe
+  margin-top: 0 !important
+
+#video_block .buttonBar span
+  display: none !important
