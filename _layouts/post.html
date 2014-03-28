@@ -1,0 +1,111 @@
+---
+layout: blog
+---
+
+        {% assign author = site.authors[page.author] %}
+        <!-- BLOG -->
+        <section id="blog">
+            
+            <!-- CONTAINER -->
+            <div class="container">
+                
+                <!-- ROW -->
+                <div class="row">
+                
+                    <!-- BLOG BLOCK -->
+                    <div class="blog_block col-lg-9 col-md-9 padbot50">
+                        
+                        <!-- SINGLE BLOG POST -->
+                        <div class="single_blog_post clearfix" data-animated="fadeInUp">
+                            <div class="clearfix">
+                                <div class="single_blog_post_date"><span>{{page.date | date:"%-d"}}</span>{{page.date | date:"%-B"}}</div>
+                                <div class="single_blog_post_descr">
+                                    <div class="single_blog_post_title">{{page.title}}</div>
+                                    <ul class="single_blog_post_info">
+                                        <li class="author"><a href="javascript:void(0);" >{{ author.username }}</a></li>
+                                        <li><a href="javascript:void(0);" >{{page.categories}}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="single_blog_post_img"><img src="{{page.featured_image}}" alt="" /></div>
+                            
+                            <div class="single_blog_post_content">
+                               {{ content }}
+                            </div>
+                            
+                        </div><!-- //SINGLE BLOG POST -->
+                        
+                        
+                        <!-- SINGLE BLOG POST TAG -->
+                        <div class="widget_tags margbot50" data-animated="fadeInUp">
+                            <ul>
+                                {% for tag in page.tags %} 
+                                    <li><a href="javascript:void(0);" >{{tag}}</a></li>
+                                 {% endfor %} 
+                            </ul>
+                        </div><!-- //SINGLE BLOG POST TAG -->
+                        
+                    </div><!-- //BLOG BLOCK -->
+                    
+                    
+                    <!-- SIDEBAR -->
+                    <div class="sidebar col-lg-3 col-md-3 padbot50">
+                        
+                        <!-- SEARCH WIDGET -->
+                        <div class="sidepanel widget_search">
+                            <form class="search_form" action="#" method="get" name="search_form">
+                                <input type="text" name="Search the site..." value="Search the site..." onFocus="if (this.value == 'Search the site...') this.value = '';" onBlur="if (this.value == '') this.value = 'Search the site...';" />
+                                <input class="search_btn" type="submit" value="Search!">
+                            </form>
+                        </div><!-- //SEARCH WIDGET -->
+                        
+                        <!-- META WIDGET -->
+                        <div class="sidepanel widget_meta">
+                            <ul>
+
+                            {% for category in site.categories %}
+                                <li><a href="javascript:void(0);" >{{category | first }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div><!-- //META WIDGET -->
+                        
+                        
+                        <!-- TEXT WIDGET -->
+                        <div class="sidepanel widget_text">
+                            <div class="sidepanel_title">About Blog</div>
+                            <p>This blog is written by ninjaas and read by you. Your contribution makes it amazing.</p>
+                        </div><!-- //TEXT WIDGET -->
+                        
+                        
+                        <!-- POPULAR POSTS WIDGET -->
+                        {% if site.related_posts != empty %}
+                        <div class="sidepanel widget_popular_posts">
+                            {% for post in site.related_posts %}
+                            <div class="recent_posts_widget clearfix">
+                                <a class="post_item_img_widget" href="{{ post.url }}" >
+                                    <img src="{{post.featured_image}}" alt="" />
+                                </a>
+                                <div class="post_item_content_widget">
+                                    <a class="post_title" href="{{ post.url }}" >{{ post.title }}</a>
+                                    <ul class="post_item_inf_widget">
+                                        <li>{{post.date | date_to_long_string}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div><!-- //POPULAR POSTS WIDGET -->
+                        {% endif %}
+                        
+                        <!-- POPULAR TAGS WIDGET -->
+                        <div class="sidepanel widget_tags">
+                            <ul>
+                                {% for tag in site.tags %}
+                                    <li><a href="javascript:void(0);" >{{tag | first}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div><!-- //POPULAR TAGS WIDGET -->
+                    </div><!-- //SIDEBAR -->
+                </div><!-- //ROW -->
+            </div><!-- //CONTAINER -->
+        </section><!-- //BLOG -->
+        

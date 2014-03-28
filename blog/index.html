@@ -1,0 +1,96 @@
+---
+layout: blog
+title: Ninjaas - Blog
+---
+
+<!-- BLOG -->
+<section id="blog">
+	
+	<!-- CONTAINER -->
+	<div class="container">
+		
+		<!-- ROW -->
+		<div class="row">
+		
+			<!-- BLOG BLOCK -->
+			<div class="blog_block col-lg-9 col-md-9 padbot50">
+				{% for post in paginator.posts %}
+					<!-- BLOG POST -->
+					{% assign author = site.authors[post.author] %}
+					<div class="blog_post margbot70 clearfix" data-animated="fadeInUp">
+						<div class="blog_post_img">
+							<img src="{{post.featured_image}}" alt="" />
+						</div>
+						<div class="blog_post_descr">
+							<div class="blog_post_date">{{post.date | date_to_long_string}}</div>
+							<a class="blog_post_title" href="{{ post.url }}" >{{post.title}}</a>
+							<ul class="blog_post_info">
+								<li class="author"><a href="javascript:void(0);" >{{ author.username }}</a></li>
+								<li><a href="javascript:void(0);" >{{post.categories}}</a></li>
+							</ul>
+							<hr>
+							<div class="blog_post_content">{{post.meta}}</div>
+							<a class="read_more_btn" href="{{ post.url }}" >Read More</a>
+						</div>
+					</div><!-- //BLOG POST -->
+				{% endfor %}
+				
+				
+				<!-- PAGINATION -->
+				<ul class="pagination clearfix">
+					{% if paginator.total_pages > 1 %}
+						{% for page in (1..paginator.total_pages) %}
+						    {% if page == paginator.page %}
+								<li class="active"><a href="javascript:void(0);" >{{ page }}</a></li>
+						    {% elsif page == 1 %}
+						      <li><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}" >{{ page }}</a></li>
+						    {% else %}
+								<li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{page}}</a></li>
+						    {% endif %}
+					  {% endfor %}
+					{% endif %}
+				</ul><!-- //PAGINATION -->
+			</div><!-- //BLOG BLOCK -->
+			
+			
+			<!-- SIDEBAR -->
+			<div class="sidebar col-lg-3 col-md-3 padbot50">
+				
+				<!-- SEARCH WIDGET -->
+				<div class="sidepanel widget_search">
+					<form class="search_form" action="#" method="get" name="search_form">
+						<input type="text" name="Search the site..." value="Search the site..." onFocus="if (this.value == 'Search the site...') this.value = '';" onBlur="if (this.value == '') this.value = 'Search the site...';" />
+						<input class="search_btn" type="submit" value="Search!">
+					</form>
+				</div><!-- //SEARCH WIDGET -->
+				
+				<!-- META WIDGET -->
+				<div class="sidepanel widget_meta">
+					<ul>
+                        {% for category in site.categories %}
+                            <li><a href="javascript:void(0);" >{{category | first }}</a></li>
+                        {% endfor %}
+					</ul>
+				</div><!-- //META WIDGET -->
+				
+				
+				<!-- TEXT WIDGET -->
+				<div class="sidepanel widget_text">
+					<div class="sidepanel_title">About Blog</div>
+					<p>This blog is written by ninjaas and read by you. Your contribution makes it amazing.</p>
+				</div><!-- //TEXT WIDGET -->
+				
+				
+				<!-- POPULAR TAGS WIDGET -->
+				<div class="sidepanel widget_tags">
+					<ul>
+                        {% for tag in site.tags %}
+                            <li><a href="javascript:void(0);" >{{tag | first}}</a></li>
+                        {% endfor %}
+					</ul>
+				</div><!-- //POPULAR TAGS WIDGET -->
+			</div><!-- //SIDEBAR -->
+		</div><!-- //ROW -->
+	</div><!-- //CONTAINER -->
+</section><!-- //BLOG -->
+		

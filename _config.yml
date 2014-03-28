@@ -1,0 +1,28 @@
+name: ninjaas
+markdown: redcarpet
+pygments: true
+safe: true
+lsi: false
+source: ./
+exclude: [node_modules, styl]
+paginate: 5
+paginate_path: "blog/:num"
+permalink: none
+
+authors:
+  iraycd:
+    name: Ray Ch
+    username: iraycd
+    avatar: 0
+    email: ray@ninjaas.com
+    web: http://iraycd.com
+    twitter: iraycd
+    github: iraycd
+  pajju:
+    name: Prajwal Suhas
+    username: pajju
+    gravatar: 1
+    email: prajwal@ninjaas.com
+    web: http://pajju.com
+    twitter: prajwalps
+    github: pajju
