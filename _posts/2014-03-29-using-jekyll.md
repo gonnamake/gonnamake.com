@@ -5,7 +5,7 @@ author: iraycd
 date:   2014-03-10 4:49:00
 categories: business
 featured_image : http://jekyllrb.com/img/logo-2x.png
-meta : This is a blog to fellow ninjaas who don't know what is and how to use jekyll. This gives a brief explanation on how to use jekyll and why you should be using it.
+meta : This is a blog to fellow gonnamake who don't know what is and how to use jekyll. This gives a brief explanation on how to use jekyll and why you should be using it.
 tags:
 - jekyll
 - code

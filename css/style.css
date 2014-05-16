@@ -337,6 +337,15 @@ header {
 }
 .logo a {
   display: block;
+  font-family: "Lobster";
+  color: #fff;
+  font-size: 4rem;
+  line-height: 1.2em;
+}
+.logo a:hover {
+  -webkit-text-shadow: 1px 2px 5px #eee;
+  -moz-text-shadow: 1px 2px 5px #eee;
+  text-shadow: 1px 2px 5px #eee;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  HOME
@@ -1142,6 +1151,8 @@ input:focus {
   border: 0;
   border-radius: 4px;
   box-shadow: 0;
+  -webkit-text-shadow: none;
+  -moz-text-shadow: none;
   text-shadow: none;
   text-decoration: none;
   text-transform: uppercase;

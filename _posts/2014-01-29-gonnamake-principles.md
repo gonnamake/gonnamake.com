@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ninjaas Origin"
+title:  "Gonnamake Origin"
 author: iraycd
 date:   2014-01-29 8:00:00
 categories: priciples
@@ -28,7 +28,7 @@ tags:
 
 ## What is application and business
 
-## Why did ninjaas come into exsistence?
+## Why did gonnamake come into exsistence?
 
 ### Many problems not yet solved
 ### What are the problem we are trying to solve?
