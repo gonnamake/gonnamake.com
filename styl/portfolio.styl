@@ -1,0 +1,72 @@
+#portfolio
+  background-color: orange
+
+.work_item
+  position: relative
+  background-color: #fff
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.work_item .work_img img
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.work_item:hover .work_img img
+  opacity: 0
+
+.work_item .work_description
+  position: absolute
+  z-index: 20
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  text-align: center
+  opacity: 0
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.work_item:hover .work_description
+  top: 24%
+  opacity: 1
+
+.work_item .work_description p
+  margin: 0 0 3px
+  text-transform: uppercase
+  font-weight: 900
+  line-height: 20px
+  font-size: 16px
+  color: blue
+
+.work_item .work_description span
+  display: block
+  line-height: 20px
+  font-size: 14px
+  color: blue
+
+.work_item a.zoom
+  position: absolute
+  z-index: 30
+  left: 50%
+  bottom: 0
+  display: block
+  width: 89px
+  margin-left: -45px
+  padding: 14px 17px
+  opacity: 0
+  text-transform: uppercase
+  font-weight: 900
+  line-height: 20px
+  font-size: 16px
+  color: #666
+  border: 2px solid blue
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.work_item:hover a.zoom
+  bottom: 25%
+  opacity: 1
+
+.work_item a.zoom:hover
+  background-color: blue
+  color: white

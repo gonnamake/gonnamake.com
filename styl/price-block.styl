@@ -1,0 +1,113 @@
+#price_block
+  padding-bottom: 64px
+  background-color: orange
+
+.price_item
+  position: relative
+  padding: 27px 0 20px
+  background-color: #fff
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.price_item.price_active,
+.price_item:hover
+  transform: translateY(-20px)
+  -o-transform: translateY(-20px)
+  -ms-transform: translateY(-20px)
+  -webkit-transform: translateY(-20px)
+
+.price_item:before
+  content: ''
+  position: absolute
+  z-index: 10
+  left: 15px
+  right: 15px
+  bottom: 0
+  height: 0
+  background-color: rgba(0,0,0,0.15)
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.price_item:hover:before,
+.price_item.price_active:before
+  bottom: -20px
+  height: 20px
+
+.price_item_title
+  padding-bottom: 26px
+  font-weight: 900
+  line-height: 26px
+  font-size: 24px
+  color: #333
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.price_active .price_item_title
+  color: red
+
+.price_item_cost
+  display: table
+  width: 170px
+  height: 170px
+  margin: 0 auto 30px
+  font-weight: 900
+  line-height: 100px
+  font-size: 24px
+  color: #fff
+  border-radius: 50%
+  background-color: orange
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+
+.price_active .price_item_cost
+  background-color: red
+
+.price_item_cost .wrap_middle
+  display: table-cell
+  vertical-align: middle
+
+.price_item_cost span
+  display: inline-block
+  font-size: 63px
+
+.price_item_text
+  padding: 15px 5px 14px
+  font-size: 15px
+  color: #333
+  border-top: 1px solid #e9e9e9
+
+.price_item_text.last
+  border-bottom: 1px solid #e9e9e9
+
+.price_item .btn_order
+  display: block
+  margin: 20px 20px 0
+  padding: 22px 10px 19px
+  text-transform: uppercase
+  font-weight: 900
+  font-size: 16px
+  color: #333
+  border-radius: 4px
+  background-color: orange
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
+  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out
+
+.price_item.price_active .btn_order
+  background-color: red
+  color: #fff
+
+.price_item .btn_order:focus
+  margin-top: 22px
+  margin-bottom: -2px
+
+.price_best:after
+  content: ''
+  position: absolute
+  left: -3px
+  top: -4px
+  width: 76px
+  height: 75px
+  background-image: url(../images/price_ribbon.png)
+  background-repeat: no-repeat
+  background-size: 100% auto
+  -webkit-background-size: 100% auto

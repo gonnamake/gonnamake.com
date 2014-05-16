@@ -1,0 +1,86 @@
+#blog
+  padding-bottom: 85px
+
+#blog .title
+  color: blue
+
+.post_item
+  transition: all 0.3s ease-in-out
+  -webkit-transition: all 0.3s ease-in-out
+  .featured_image
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
+.recent_posts:hover .post_item
+  opacity: 0.3
+
+.recent_posts .post_item:hover
+  opacity: 1
+
+.post_item_img
+  display: block
+  background-color: #000
+
+.post_item_content
+  padding: 23px 0 0
+
+.post_item_content a.post_title
+  font-weight: 400
+  line-height: 36px
+  font-size: 30px
+  color: #333
+
+.post_item:hover .post_item_content a.post_title
+  color: blue
+
+.post_item_inf
+  position: relative
+  margin-bottom: 24px
+  padding-top: 7px
+  padding-bottom: 26px
+
+.post_item_inf:before
+  content: ''
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 70px
+  height: 2px
+  background-color: blue
+
+.post_item_inf li
+  display: inline-block
+  padding-right: 12px
+  text-transform: uppercase
+  font-weight: 900
+  line-height: 20px
+  font-size: 12px
+  color: #999
+
+.post_item_text
+  line-height: 22px
+  font-size: 14px
+  color: #666
+
+.view_all_posts
+  display: block
+  margin: 30px 0 0
+  padding: 20px 10px 21px
+  border: 2px solid blue
+  border-radius: 4px
+  text-transform: uppercase
+  font-family: 'Lato', sans-serif
+  text-align: center
+  font-weight: 900
+  line-height: 20px
+  font-size: 20px
+  color: white
+  background: blue
+
+.view_all_posts:hover
+  color: blue
+  background: white
