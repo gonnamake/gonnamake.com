@@ -1,10 +1,11 @@
 name: gonnamake
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 safe: true
 lsi: false
 source: ./
 exclude: [node_modules, styl]
+gems: [jekyll-paginate]
 paginate: 5
 paginate_path: "blog/:num"
 permalink: none
@@ -18,11 +19,3 @@ authors:
     web: http://iraycd.com
     twitter: iraycd
     github: iraycd
-  pajju:
-    name: Prajwal Suhas
-    username: pajju
-    gravatar: 1
-    email: prajwal@ninjaas.com
-    web: http://pajju.com
-    twitter: prajwalps
-    github: pajju
