@@ -33,7 +33,7 @@ function calculateScroll() {
 		if ( winTop > contentTop[i] - rangeTop && winTop < contentBottom[i] - rangeBottom ){
 			$('.navmenu li.scroll_btn')
 			.removeClass('active')
-			.eq(i).addClass('active');			
+			.eq(i).addClass('active');
 		}
 	})
 };
@@ -47,15 +47,15 @@ jQuery(document).ready(function() {
 			jQuery('header .navmenu').slideToggle(300);
 		});
 	}
-		
+
 	// if single_page
-	if (jQuery("#page").hasClass("single_page")) {			
+	if (jQuery("#page").hasClass("single_page")) {
 	}
 	else {
 		$(window).scroll(function(event) {
 			calculateScroll();
 		});
-		$('.navmenu ul li a, .mobile_menu ul li a').click(function() {  
+		$('.navmenu ul li a, .mobile_menu ul li a').click(function() {
 			$('html, body').animate({scrollTop: $(this.hash).offset().top - 79}, 1000);
 			return false;
 		});
@@ -66,7 +66,7 @@ jQuery(document).ready(function() {
 
 
 
-	
+
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -81,8 +81,8 @@ jQuery(window).load(function(){
 		prevText: "",
 		nextText: ""
 	});
-	
-	
+
+
 	//Vision Slider
 	$('.flexslider.blog_post_slider').flexslider({
 		animation: "slide",
@@ -91,8 +91,8 @@ jQuery(window).load(function(){
 		prevText: "",
 		nextText: ""
 	});
-	
-	
+
+
 	//Testimonials Slider
 	$('.flexslider.testimonials_slider').flexslider({
 		animation: "slide",
@@ -102,8 +102,8 @@ jQuery(window).load(function(){
 		prevText: "",
 		nextText: ""
 	});
-	
-	
+
+
 	//Twitter Slider
 	$('.flexslider.twitter_list').flexslider({
 		animation: "fade",
@@ -114,8 +114,8 @@ jQuery(window).load(function(){
 		prevText: "",
 		nextText: ""
 	});
-	
-	
+
+
 });
 
 
@@ -175,7 +175,7 @@ jQuery(document).ready(function() {
 /*-----------------------------------------------------------------------------------*/
 jQuery(document).ready(function() {
 	$("#ajax-contact-form").submit(function() {
-		var str = $(this).serialize();		
+		var str = $(this).serialize();
 		$.ajax({
 			type: "POST",
 			url: "contact_form/contact_process.php",
@@ -198,19 +198,19 @@ jQuery(document).ready(function() {
 //Contact Height
 jQuery(document).ready(function(){
 	contactHeight();
-	
+
 });
 
 jQuery(window).resize(function(){
 	contactHeight();
-	
+
 });
 
 function contactHeight(){
-	var wh = $(window).height();
-	var container_h = $('#contacts').height();
-	
-	$('#contacts').css('min-height', wh - 240);
+	// var wh = $(window).height();
+	// var container_h = $('#contacts').height();
+	//
+	// $('#contacts').css('min-height', wh - 240);
 }
 
 
@@ -220,7 +220,7 @@ function contactHeight(){
 /*-----------------------------------------------------------------------------------*/
 /*	SCROLL TOP
 /*-----------------------------------------------------------------------------------*/
-jQuery(document).ready(function() {	
+jQuery(document).ready(function() {
 	$("a.back_top").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 		return false;
@@ -248,21 +248,3 @@ $(document).ready(function() {
 			}
 		);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
